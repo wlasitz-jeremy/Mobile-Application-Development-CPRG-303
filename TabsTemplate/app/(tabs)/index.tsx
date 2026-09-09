@@ -1,31 +1,83 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View, Text, Image, SafeAreaView } from "react-native";
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
-
-export default function TabOneScreen() {
+export default function IdCardScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.card}>
+        <Text style={styles.title}>SAIT CAMPUS ID</Text>
+        <Image source={{uri: "https://picsum.photos/200"}} style={styles.photo} />
+        <View style={styles.infoRow}>
+          <Text style={styles.name}>Jeremy Wlasitz</Text>
+          <Text style={styles.studentId}>ID: 000123456</Text>
+        </View>
+        <View style={styles.badge}>
+          <Text style={styles.badgeText}>Software Development</Text>
+        </View>
+        </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  title: {
+    fontSize: 22,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 20,
+    color: "#0a66c2",
+  },
+
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f4f6f9",
   },
-  title: {
+
+  card: {
+    width: 320,
+    height: 320,
+    backgroundColor: "#ffffff",
+    padding: 20,
+    borderRadius: 12,
+    elevation: 4,
+  },
+
+  photo: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    alignSelf: "center",
+    marginBottom: 20,
+  },
+
+  infoRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+
+  name: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+
+  studentId: {
+    fontSize: 16,
+    color: "#555",
   },
+
+  badge: {
+    backgroundColor: "#0a66c2",
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 20,
+    alignSelf: "flex-start",
+  },
+
+  badgeText: {
+    color: "white",
+    fontWeight: "600",
+  }
 });
