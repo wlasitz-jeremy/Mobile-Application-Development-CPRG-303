@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, View, Text, Image, SafeAreaView } from "react-native";
+import { StyleSheet, View, Text, Image } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function IdCardScreen() {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.card}>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.card}>
         <Text style={styles.title}>SAIT CAMPUS ID</Text>
         <Image source={{uri: "https://picsum.photos/200"}} style={styles.photo} />
         <View style={styles.infoRow}>
