@@ -40,7 +40,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
     padding: 20,
     borderRadius: 12,
-    elevation: 4,
+    elevation: 5,
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
   },
 
   photo: {
@@ -55,7 +61,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 10,
+    marginBottom: 15,
   },
 
   name: {
@@ -77,7 +83,7 @@ const styles = StyleSheet.create({
   },
 
   badgeText: {
-    color: "white",
+    color: "#ffffff",
     fontWeight: "600",
   }
 });
