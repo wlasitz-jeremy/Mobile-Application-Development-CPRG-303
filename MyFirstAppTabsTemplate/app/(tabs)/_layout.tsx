@@ -20,12 +20,12 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+          title: 'Home',
           tabBarIcon: ({ color }) => (
             <SymbolView
               name={{
                 ios: 'chevron.left.forwardslash.chevron.right',
-                android: 'code',
+                android: 'home',
                 web: 'code',
               }}
               tintColor={color}
@@ -51,12 +51,12 @@ export default function TabLayout() {
       <Tabs.Screen
         name="two"
         options={{
-          title: 'Tab Two',
+          title: 'Search',
           tabBarIcon: ({ color }) => (
             <SymbolView
               name={{
                 ios: 'chevron.left.forwardslash.chevron.right',
-                android: 'code',
+                android: 'search',
                 web: 'code',
               }}
               tintColor={color}
