@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Image, ScrollView } from "react-native";
+import { StyleSheet, View, Text, Image, ScrollView, TextInput } from "react-native";
 
 
 export default function App() {
@@ -6,7 +6,9 @@ export default function App() {
       <View style={styles.appContainer}>
         <ScrollView style={styles.scrollView}>
         <View style={styles.container}>
-          <Text style={styles.text}>Open up App.tsx to start working on your app!</Text>
+          <View style={styles.searchBar}>
+          <TextInput style={styles.textSearchBar} placeholder="This is placeholder text."/>
+          </View>
           <Text>Testing to see if the scroll view works</Text>
           <Text>Testing to see if the scroll view works</Text>
           <Text>Testing to see if the scroll view works</Text>
@@ -113,22 +115,28 @@ const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'flex-end',
   },
   scrollView: {
     marginTop: 60,
   },
   container: {
-    backgroundColor: '#767676',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // width: '100%',
-    // height: '93%',
+    backgroundColor: '#c0c0c0',
+    alignItems: 'center',
+    width: '100%',
   },
-  text: {
+  searchBar: {
+    backgroundColor: '#95bdeb',
+    marginTop: 5,
+    marginRight: 50,
+    marginBottom: 5,
+    marginLeft: 50,
+    borderRadius: 25,
+  },
+  textSearchBar: {
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
+    padding: 5,
   },
 });
