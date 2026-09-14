@@ -5,6 +5,7 @@ export default function App() {
   return (
       <View style={styles.appContainer}>
         <ScrollView style={styles.scrollView}>
+          <View style={styles.test3}></View>
         <View style={styles.container}>
           <View style={styles.searchBar}>
           <TextInput style={styles.textSearchBar} placeholder="This is placeholder text."/>
@@ -106,7 +107,9 @@ export default function App() {
           <Text>Testing to see if the scroll view works</Text>
           <Text>Testing to see if the scroll view works</Text>
         </View>
+        <View style={styles.test1}></View>
         </ScrollView>
+        <View style={styles.bottomNavBar}></View>
       </View>
   );
 }
@@ -119,9 +122,10 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     marginTop: 60,
+    backgroundColor: '#c0c0c0',
   },
   container: {
-    backgroundColor: '#c0c0c0',
+    // backgroundColor: '#c0c0c0',
     alignItems: 'center',
     width: '100%',
   },
@@ -138,5 +142,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     padding: 5,
+  },
+  test1: {
+    height: 100,
+    backgroundColor: '#5595ca',
+  },
+  bottomNavBar: {
+    height: 80,
+    backgroundColor: '#333',
+  },
+  test3: {
+    height: 100,
+    backgroundColor: '#5595ca',
   },
 });
