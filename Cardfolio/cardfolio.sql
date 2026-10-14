@@ -1,3 +1,5 @@
+-- TO RUN SPRING-BOOT APPLICATION ./mvnw spring-boot:run
+
 -- Drops the database if it exists, recreates it and them selects it to use
 DROP DATABASE IF EXISTS cardfolio;
 CREATE DATABASE cardfolio;
