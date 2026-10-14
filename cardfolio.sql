@@ -193,11 +193,8 @@ CREATE TABLE deck_cards (
 );
 
 -- Creates indexes to improve query performance
-CREATE INDEX idx_cards_user
-ON cards(user_id);
-
-CREATE INDEX idx_cards_game
-ON cards(game_id);
+CREATE INDEX idx_cards_user_game
+ON cards(user_id, game_id);
 
 CREATE INDEX idx_cards_name
 ON cards(name);
