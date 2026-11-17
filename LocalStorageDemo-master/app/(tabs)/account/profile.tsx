@@ -129,7 +129,7 @@ export default function ProfileScreen() {
 
   // Edit mode: render a TextInput per field via Controller
   return (
-    <View style={styles.container}>
+    <View style={styles.container}>    
       <Text style={styles.title}>Edit Profile</Text>
       {fields.map((f) => (
         <View key={f.name}>
